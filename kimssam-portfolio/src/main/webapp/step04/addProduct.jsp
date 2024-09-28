@@ -42,7 +42,7 @@ cursor:pointer}
 #file-name{
 position:relative;
 top:-35px;
-left:-180px;
+left:-160px;
 display:inline-block;
 }
 </style>
