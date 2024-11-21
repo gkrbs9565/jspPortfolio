@@ -12,13 +12,17 @@
 <body>
 <%
 String id = request.getParameter("cartId");
-if(id == null || id.trim().equals("")) {
+if(id==null || id.trim().equals("")){
 	response.sendRedirect("index.jsp#products");
 	return;
 }
-session.invalidate();
-response.sendRedirect("cart.jsp");
 
+session.invalidate(); //세션에 값이 있으면 모두 무효화하는 메소드
+response.sendRedirect("cart.jsp");
 %>
 </body>
 </html>
+
+
+
+

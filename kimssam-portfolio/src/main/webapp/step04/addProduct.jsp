@@ -41,12 +41,8 @@ border-radius:5px;
 cursor:pointer}
 #file-name{
 position:relative;
-top:-35px;
-<<<<<<< HEAD
-left:-170px;
-=======
-left:-160px;
->>>>>>> branch 'gkrbs9565' of https://github.com/gkrbs9565/jspPortfolio
+top:-65px;
+left:140px;
 display:inline-block;
 }
 </style>

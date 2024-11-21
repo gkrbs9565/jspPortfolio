@@ -21,7 +21,6 @@ function form_check_addProduct(){
 			return false;
 	}
 	/*가격은 숫자만 입력하도록 구현*/
-<<<<<<< HEAD
 	if ((unitPrice.value.length == 0)) {
 		alert("가격을 입력해주세요.");
 		unitPrice.focus();
@@ -31,18 +30,6 @@ function form_check_addProduct(){
 		unitPrice.focus();
 		return false;
 	}else if(!(unitPrice.value)){
-=======
-	if((unitPrice.value.length == 0)){
-				alert("가격을 입력해주세요.");
-				unitPrice.focus();
-				return false;
-		}else if(unitPrice.value < 0 ){
-			alert("가격은 음수를 입력할 수 없습니다.");
-			unitPrice.focus();
-			return false;
-		}
-		else if(!(unitPrice.value)){
->>>>>>> branch 'gkrbs9565' of https://github.com/gkrbs9565/jspPortfolio
 			    alert("가격을 입력해주세요.");
 				unitPrice.focus();
 				return false;

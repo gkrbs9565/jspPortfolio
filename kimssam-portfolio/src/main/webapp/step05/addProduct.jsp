@@ -41,8 +41,8 @@ border-radius:5px;
 cursor:pointer}
 #file-name{
 position:relative;
-top:-35px;
-left:-170px;
+top:-65px;
+left:140px;
 display:inline-block;
 }
 </style>
@@ -199,6 +199,17 @@ enBtn.addEventListener("click",function(){
 								<span id="file-name">
 								     <fmt:message key="noFile"/>
 								</span> 
+							</div>
+						</div>
+						<div class="row m-3">
+							<div class="col-2">
+								<label for="pQuantity" class="">
+                                    <fmt:message key="quantity"/>
+                                </label>
+							</div>
+							<div class="col-4">
+								<input type="text" class="form-control" id="pQuantity"
+									placeholder="" name="pQuantity">
 							</div>
 						</div>
 						<div class="row m-3">

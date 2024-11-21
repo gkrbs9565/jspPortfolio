@@ -39,9 +39,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  
+
 <%
-String cartId = session.getId();
+String cartId = session.getId(); //JsessionId 얻어오는 메소드
 %>
 </head>
 
@@ -53,21 +53,21 @@ String cartId = session.getId();
        <h1 class="p-5 display-3 mt-5">장바구니</h1>
   </div>
   <div class="container">
-    <div class="row">
-       <table width="100%" height="100px">
+    <div class="row my-5">
+       <table width="100%">
           <tr>
              <td align="left">
-                <a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-danger">장바구니 리스트 모두 삭제하기</a>
+                <a href="./deleteCart.jsp?cartId=<%=cartId %>" class="btn btn-danger">장바구니 리스트 모두 삭제하기</a>
              </td>
              <td align="right">
-                <a href="./shippingInfo.jsp?cartId=<%=cartId%>" class="btn btn-success">주문하기</a>
+                <a href="./shippingInfo.jsp?cartId=<%=cartId %>" class="btn btn-success">주문하기</a>
              </td>
           </tr>
        
        </table>
     </div><!-- row -->
-    <div class="row">
-         <table class="table table-secondary table-striped" width="100%" height="120px">
+    <div class="row mb-5">
+         <table width="100%" class="table table-success table-striped">
           <tr>
              <th>상품</th>
              <th>가격</th>
@@ -89,7 +89,7 @@ String cartId = session.getId();
            	<td><%=product.getUnitPrice() %></td>
            	<td><%=product.getQuantity() %></td>
            	<td><%=total %></td>
-           	<td><a href="./removeCart.jsp?id=<%=product.getProductId() %>" class="badge badge-danger">삭제</a></td>
+           	<td><a href="./removeCart.jsp?id=<%=product.getProductId() %>" class="badge border border-success text-success">삭제</a></td>
            </tr>
            
            <%
@@ -106,13 +106,6 @@ String cartId = session.getId();
        </table>
     </div><!-- row -->
   </div>
-  
-  
-  
-  
-  
-  
-	
   <!-- footer include -->
   <%@ include file="footer.jsp" %>
  

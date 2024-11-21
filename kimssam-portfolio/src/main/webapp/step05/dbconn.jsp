@@ -11,8 +11,8 @@
 <body>
 <%
    Connection conn = null;
-  /*  PreparedStatement pstmt = null;
-   ResultSet rs = null; */
+   PreparedStatement pstmt = null;
+   ResultSet rs = null;
    
    try{
 	   String url = "jdbc:oracle:thin:@localhost:1521:xe";

@@ -54,7 +54,7 @@
             </li>
             -->
             <li><a href="index.jsp#contact">Contact</a></li>
-            <li><a href="addProduct.jsp">AddProduct</a></li>
+            <li><a href="addProduct.jsp">판매제품 등록</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
