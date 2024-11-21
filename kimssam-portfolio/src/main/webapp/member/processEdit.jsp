@@ -37,7 +37,7 @@
 
 <sql:update dataSource="${dataSource}" 
 var="resultSet">
-insert into member values(?,?,?,?,?,?,?,?,sysdate)
+update member set name=?, mail=?, address=?, phone=? where id=?
 <sql:param value="<%=id %>" />
 <sql:param value="<%=password %>" />
 <sql:param value="<%=name %>" />
@@ -49,7 +49,7 @@ insert into member values(?,?,?,?,?,?,?,?,sysdate)
 </sql:update>
 
 <c:if test="${resultSet>=1}">
-	<c:redirect url="resultMember.jsp?msg=1"/>
+	<c:redirect url="resultMember.jsp?msg=0"/>
 </c:if>
 </body>
 </html>

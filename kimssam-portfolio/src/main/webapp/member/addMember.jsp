@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList" %>    
-<%@ page import="dto.Product" %>    
+<%@ page import="dto.Product" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +57,7 @@
 <script>
 	function checkform() {
 		if (!document.newmember.id.value) {
-			alert("아이디를 입력해주세요")
+			alert("test")
 			return false
 		}
 		if (!document.newmember.password.value) {
@@ -154,7 +155,7 @@
 					<label class="col-sm-2">생일</label>
 					<div class="col-sm-6">
 						<input type="number" min="1900" max="2023" value="1980"
-							class="form-control w-50 my-2" placeholder="id" name='id'>
+							class="form-control w-50 my-2" placeholder="id" name='birthyy'>
 						<!-- <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)"
 						size="6" class="form-control w-25 d-inline"> !-->
 						<select name="birthmm" class="form-control w-25 d-inline"
@@ -207,7 +208,7 @@
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10 ">
 					<input type="button" class="btn btn-success " value="등록"
-						onclick="checkform()"> <input type="reset"
+						onclick="return checkform()"> <input type="reset"
 						class="btn btn-danger" value="취소" onclick="reset()">
 				</div>
 			</div>

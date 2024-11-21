@@ -80,6 +80,9 @@ h2>b {
 		  String loginId = (String)session.getAttribute("sessionId");
 		  out.print("<h2>"+loginId+"님 <b> 환영합니다 </b></h2>");
 	  }
+	  else if(msg.equals("2")) {
+		  out.print("<h2 clss='alert alert-danger text-center'> 회원정보가 수정되었습니다.</h2>");
+	  }
   }else {
 	  out.print("<h2>회원가입을 <i> 실패하였습니다 </i> 정보를 재입력해주세요</h2>");
   }

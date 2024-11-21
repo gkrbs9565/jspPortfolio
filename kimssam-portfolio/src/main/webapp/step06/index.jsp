@@ -3,6 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%-- <%@ page import="dao.ProductRepository" %> --%>
 <jsp:useBean id="productDAO" class="dao.ProductRepository"
 	scope="session" />
