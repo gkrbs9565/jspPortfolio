@@ -38,14 +38,11 @@
 <sql:update dataSource="${dataSource}" 
 var="resultSet">
 update member set name=?, mail=?, address=?, phone=? where id=?
-<sql:param value="<%=id %>" />
-<sql:param value="<%=password %>" />
 <sql:param value="<%=name %>" />
-<sql:param value="<%=gender %>" />
-<sql:param value="<%=birth %>" />
 <sql:param value="<%=mail %>" />
-<sql:param value="<%=phone %>" />
 <sql:param value="<%=address %>" />
+<sql:param value="<%=phone %>" />
+<sql:param value="<%=id %>" />
 </sql:update>
 
 <c:if test="${resultSet>=1}">

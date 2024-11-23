@@ -52,14 +52,15 @@
 #information {
 	margin-top: 300px;
 	margin-bottom: 158px;
-	margin-left: 580px;
+	margin-left: 300px;
 }
 
 h2>i {
-	color:red;
+	color: red;
 }
+
 h2>b {
-	color:blue;
+	color: blue;
 }
 </style>
 </head>
@@ -71,22 +72,22 @@ h2>b {
 
 
 	<h1>회원정보</h1>
-	<div class="container" id="information">
+	<div class="container text-center" id="information">
 		<%
-  String msg = request.getParameter("msg");
-  if(msg != null) {
-	  if(msg.equals("1")) out.print("<h2>회원가입을 <b> 축하드립니다 </b> 로그인을 해주세요</h2>");
-	  else if(msg.equals("2")) {
-		  String loginId = (String)session.getAttribute("sessionId");
-		  out.print("<h2>"+loginId+"님 <b> 환영합니다 </b></h2>");
-	  }
-	  else if(msg.equals("2")) {
-		  out.print("<h2 clss='alert alert-danger text-center'> 회원정보가 수정되었습니다.</h2>");
-	  }
-  }else {
-	  out.print("<h2>회원가입을 <i> 실패하였습니다 </i> 정보를 재입력해주세요</h2>");
-  }
-  %>
+		String msg = request.getParameter("msg");
+		if (msg != null) {
+			if (msg.equals("1"))
+				out.print("<h2>회원가입을 <b> 축하드립니다 </b> 로그인을 해주세요</h2>");
+			else if (msg.equals("2")) {
+				String loginId = (String) session.getAttribute("sessionId");
+				out.print("<h2>" + loginId + "님 <b> 환영합니다 </b></h2>");
+			} else if (msg.equals("0")) {
+				out.print("<h2 class='alert alert-danger text-center'> 회원정보가 수정되었습니다.</h2>");
+			}
+		} else {
+			out.print("<h2>회원가입을 <i> 실패하였습니다 </i> 정보를 재입력해주세요</h2>");
+		}
+		%>
 	</div>
 
 
