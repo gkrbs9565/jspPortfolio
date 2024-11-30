@@ -51,7 +51,7 @@
                     <li><a href='<c:url value="/step06/index.jsp#services"/>'>Services</a></li>
                     <li><a href='<c:url value="/step06/index.jsp#team"/>'>Team</a></li>
                     <li><a href='<c:url value="/step06/blog.jsp"/>'>Blog</a></li>
-                    <li><a href='<c:url value="/step06/index.jsp#contact"/>'>Forum</a></li>
+                    <li><a href='<c:url value="/BoardListAction.do?pageNum=1"/>'>Forum</a></li>
                     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">product</a>
