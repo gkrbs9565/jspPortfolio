@@ -54,9 +54,31 @@ public class BoardController extends HttpServlet{
 		}
 		boardlist = dao.getBoardList(pageNum);
 		
+		
 		request.setAttribute("pageNum", pageNum);
 		request.setAttribute("boardlist", boardlist);
 		
+		String items = request.getParameter("items");
+		String text = request.getParameter("text");
 		
+		
+		int total_record = dao.getListcount(items, text);
+		
+		boardlist = dao.getBoardList(pageNum, limit, items, text);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("total_record", total_record);
+		request.setAttribute("boardlist", boardlist);
+
+
+		int total_page;
+		
+		if(total_record % limit == 0) {
+			total_page = total_record/limit;
+		}else {
+			total_page = (total_record/limit)+1;
+		}
+		
+		request.setAttribute("total_page", total_page);
+		request.setAttribute("boardlist", boardlist);
 	}
 }

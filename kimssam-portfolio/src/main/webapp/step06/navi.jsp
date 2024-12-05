@@ -2,9 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <header id="header" class="header fixed-top">
-    <%
-        String sessionId = (String) session.getAttribute("sessionId");
-    %>
+    <% 
+    	String sessionId = (String) session.getAttribute("sessionId");
+	%>
     <div class="topbar d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
